@@ -28,6 +28,7 @@ public class EchoWebSocketServer {
 
     @OnOpen
     public void onOpen(Session session) {
+        logger.log(Level.INFO, "EchoWebSocketServer versão 1.0.0");        
         logger.log(Level.INFO, "Opening Session {0}", session.getId());        
     }
 
@@ -45,6 +46,7 @@ public class EchoWebSocketServer {
     public void onMessage(String message, Session session) {
         try {
             logger.log(Level.INFO, "Received Message on Session {0}", session.getId());  
+            logger.log(Level.INFO, "Message: {0}", message);  
             session.getBasicRemote().sendText(message);
         } catch (IOException ex) {
             logger.log(Level.SEVERE, null, ex);
