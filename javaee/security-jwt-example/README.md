@@ -31,3 +31,5 @@ The server's protected routes will check for a valid JWT in the Authorization he
 #### rememberme=true
 Whenever the user wants to access a protected resource, the user agent would automatically include the JWT in the cookie with `JREMEMBERMEID` key. 
 It does not require state to be stored on the server because the JWT encapsulates everything the server needs to serve the request.
+
+

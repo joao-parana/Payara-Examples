@@ -46,6 +46,7 @@ import javax.security.enterprise.SecurityContext;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
+import static javax.ws.rs.core.Response.Status.OK;
 import static javax.ws.rs.core.Response.Status.UNAUTHORIZED;
 
 @Path("auth")
@@ -69,4 +70,21 @@ public class AuthController {
         return Response.status(UNAUTHORIZED).build();
     }
 
+    @GET
+    @Path("logout")
+    public Response logout() {
+        LOGGER.log(Level.INFO, "logout");
+        /*
+        if (securityContext.getCallerPrincipal() != null) {
+            JsonObject result = Json.createObjectBuilder()
+                    .add("user", securityContext.getCallerPrincipal().getName())
+                    .build();
+            return Response.ok(result).build();
+        }
+        */
+        // request.logout();
+        return Response.ok(OK).build();
+    }
+
 }
+
