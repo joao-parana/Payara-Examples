@@ -53,6 +53,12 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <failOnMissingWebXml>false</failOnMissingWebXml>
 
+        <maven-compiler-plugin.version>3.6.0</maven-compiler-plugin.version>
+        <java.version>1.8</java.version>
+        <javaee-api.version>8.0</javaee-api.version>
+        <junit.version>4.12</junit.version>
+        <assertj-core.version>3.8.0</assertj-core.version>
+
         <payara.version>5.194</payara.version>
     </properties>
     
@@ -63,6 +69,8 @@
         <module>payara-micro</module>
         <module>payara-services</module>
         <module>osgi</module>
+        <module>security-1-0</module>
+
     </modules>
     
     <dependencies>
